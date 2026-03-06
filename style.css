@@ -43,7 +43,7 @@ header {
 
 .mobile-menu-section {
   height: 100vh;
-  display: flex;
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -69,17 +69,20 @@ header {
   justify-content: space-between;
   align-items: center;
   padding-right: 1rem;
-  padding-top: 1rem;
+  padding-top: 2rem;
+  padding-right: 1rem;
 }
 
 .mobile-menu-section-list {
-  margin-top: 3.5rem;
+  margin-top: 1rem;
   margin-left: 2rem;
+  color: var(--Gray-500);
 }
 
 .mob-menu-section-list-item {
   list-style-type: none;
   padding-bottom: 1.5rem;
+  padding-block: 1rem;
 }
 
 .mob-menu-section-list-item a {
@@ -88,60 +91,52 @@ header {
   text-decoration: none;
 }
 
-.list-item-one {
+.label-row {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  gap: 0.5rem;
-  font-size: inherit;
-  color: var(--Gray-500);
+  gap: 1rem;
+  padding-block: 0.9rem;
+}
+
+.arrow-btn {
+  cursor: pointer;
+  padding: 5px;
 }
 
 .arrow-up {
   display: none;
-  cursor: pointer;
+  width: 10px;
 }
 
 .arrow-down {
-  cursor: pointer;
-  display: inline-block;
-}
-
-.mob-menu-section-list-item.drop-down:hover .sub-menu {
   display: block;
+  width: 10px;
 }
 
-.mob-menu-section-list-item.drop-down:hover .arrow-down {
+.arrow-btn.active .arrow-down {
   display: none;
 }
 
-.mob-menu-section-list-item.drop-down:hover .arrow-up {
+.arrow-btn.active .arrow-up {
   display: block;
-}
-
-.mob-menu-section-list-item:hover {
-  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .sub-menu {
-  margin-left: 1.3rem;
-  padding-top: 1.5rem;
   display: none;
-  flex-direction: column;
+  list-style-type: none;
+  padding-left: 25px;
+  margin-top: 15px;
 }
 
-.sub-menu-items {
+.sub-menu.show {
+  display: block;
+}
+
+.sub-menu li {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
-  padding-bottom: 1.5rem;
-  color: var(--Gray-500);
-}
-
-.sub-menu-items-two {
-  padding-bottom: 1.5rem;
-  color: var(--Gray-500);
+  gap: 15px;
+  padding: 0.8rem 0;
 }
 
 .login-section {
@@ -151,6 +146,7 @@ header {
 
 .login-section p {
   font-size: 18px;
+  cursor: pointer;
 }
 
 .login-section button {
@@ -159,6 +155,8 @@ header {
   background-color: white;
   border-radius: 1rem;
   font-size: inherit;
+  cursor: pointer;
+  border: 1.72px solid var(--Gray-500);
 }
 
 article {
