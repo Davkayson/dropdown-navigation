@@ -12,10 +12,12 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 1rem auto;
   font-size: 18px;
   background-color: var(white);
-  font-family: 'Epilogue';
+  font-family: 'Epilogue', sans-serif;
   position: relative;
 }
 
@@ -33,12 +35,20 @@ header {
   align-items: center;
 }
 
+.desktop-header {
+  display: none;
+}
+
 .mobile-hero-image {
   width: 100%;
 }
 
 .mobile-hero-image img {
   width: 100%;
+}
+
+.desktop-hero-image {
+  display: none;
 }
 
 .mobile-menu-section {
@@ -165,18 +175,21 @@ article {
 
 .text-section {
   width: 95vw;
+  margin: 0 auto;
   text-align: center;
 }
 
 .text-section h1 {
   font-weight: 700;
+  margin-inline: 0.3rem;
 }
 
 .text-section p {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
   line-height: 1.5rem;
   color: var(--Gray-500);
   font-weight: 500;
+  font-size: 16px;
 }
 
 .mobile-btn {
@@ -185,7 +198,7 @@ article {
   border: none;
   padding: 1rem 2rem;
   border-radius: 1rem;
-  font-size: inherit;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -204,6 +217,158 @@ footer {
 
 .mobile-footer-image img {
   width: 80%;
+}
+
+.desktop-hero-section {
+  display: none;
+}
+
+@media screen and (min-width: 720px) {
+  body {
+    display: block;
+    margin-top: 0;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+  }
+
+  .desktop-header {
+    display: contents;
+  }
+
+  .desktop-header-container {
+    display: flex;
+    margin: 2rem 0;
+    align-items: center;
+  }
+
+  .desktop-nav {
+    display: flex;
+    width: 90vw;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .desktop-image-logo img {
+    width: 80px;
+    margin-left: 0.5rem;
+  }
+
+  .desktop-nav ul {
+    display: flex;
+    padding: 1rem;
+    list-style-type: none;
+  }
+
+  .desktop-login-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .desktop-login-text {
+    font-size: 18px;
+    color: var(--Gray-500);
+  }
+
+  .desktop-header-btn {
+    color: var(--Gray-500);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--Gray-50);
+    border-color: var(--Gray-500);
+  }
+
+  footer {
+    display: none;
+  }
+
+  article {
+    display: none;
+  }
+
+  .header-container {
+    display: none;
+  }
+  .mobile-hero-image {
+    display: none;
+  }
+
+  .desktop-hero-image {
+    display: block;
+  }
+
+  .text-section {
+    display: none;
+  }
+
+  .mobile-footer {
+    display: none;
+  }
+
+  .mobile-image-logo {
+    display: none;
+  }
+
+  .desktop-hero-section {
+    width: 75vw;
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .desktop-hero-content {
+    max-width: 40vw;
+  }
+
+  .desktop-hero-content h1 {
+    font-size: 75px;
+    padding-top: 9rem;
+    padding-bottom: 2.6rem;
+    line-height: 1;
+  }
+
+  .desktop-hero-content p {
+    font-size: 18px;
+    color: var(--Gray-500);
+    line-height: 1.6;
+    padding-bottom: 5rem;
+  }
+
+  .desktop-hero-content .desktop-btn-learn {
+    padding: 0.5rem 1.5rem;
+    background-color: var(--Gray-950);
+    color: var(--Gray-50);
+    border-radius: 0.5rem;
+    margin-bottom: 7.3rem;
+    font-size: 18px;
+  }
+
+  .desktop-client-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .desktop-client-logo img {
+    width: 115px;
+    padding-right: 1rem;
+  }
+
+  .desktop-client-logo .audiophile {
+    width: 80px;
+  }
+
+  .desktop-hero-image {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .desktop-hero-image img {
+    width: 100%;
+  }
 }
 
 .attribution {
