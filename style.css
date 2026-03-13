@@ -229,6 +229,7 @@ footer {
     margin-top: 0;
     font-family: 'Epilogue', sans-serif;
     font-size: 18px;
+    background-color: var(--Gray-50);
   }
 
   .desktop-header {
@@ -236,39 +237,118 @@ footer {
   }
 
   .desktop-header-container {
+    width: 97vw;
+    margin: 1rem auto;
     display: flex;
-    margin: 2rem 0;
-    align-items: center;
-  }
-
-  .desktop-nav {
-    display: flex;
-    width: 90vw;
-    margin: 0 auto;
     justify-content: space-between;
+    /* height: 12vh; */
   }
 
   .desktop-image-logo img {
     width: 80px;
-    margin-left: 0.5rem;
+    margin-left: 0rem;
   }
 
-  .desktop-nav ul {
+  .nav-left {
+    align-items: center;
     display: flex;
-    padding: 1rem;
+    gap: 3.5rem;
+  }
+
+  .desktop-nav {
+    display: flex;
     list-style-type: none;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .desktop-nav li {
+    color: var(--Gray-500);
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .desktop-nav li:hover {
+    color: var(--Gray-950);
+  }
+
+  .desktop-nav-item {
+    position: relative;
+  }
+
+  .desktop-label-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .desktop-arrow-down {
+    display: none;
+  }
+
+  .desktop-nav-item .arrow-up {
+    display: none;
+  }
+
+  .desktop-nav-item .arrow-down {
+    display: block;
+  }
+
+  .desktop-sub-menu {
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    padding: 1rem 1.1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 10px var(--Gray-500);
+    z-index: 100;
+  }
+
+  .desktop-nav-item.active .desktop-sub-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .desktop-sub-menu li {
+    display: flex;
+    gap: 1rem;
+    padding: 0.4rem 0;
+    align-items: center;
+    /* white-space: nowrap; */
+  }
+
+  .features-dropdown {
+    min-width: 100px;
+    left: -72px;
+  }
+
+  .company-dropdown {
+    left: 1px;
+    min-width: 112px;
+  }
+
+  .desktop-list-item a {
+    text-decoration: none;
+    color: var(--Gray-500);
+  }
+
+  .desktop-list-item:hover a {
+    color: var(--Gray-950);
   }
 
   .desktop-login-section {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 3rem;
+    gap: 1.2rem;
   }
 
   .desktop-login-text {
     font-size: 18px;
     color: var(--Gray-500);
+    cursor: pointer;
   }
 
   .desktop-header-btn {
@@ -277,6 +357,7 @@ footer {
     border-radius: 0.5rem;
     background-color: var(--Gray-50);
     border-color: var(--Gray-500);
+    cursor: pointer;
   }
 
   footer {
@@ -311,45 +392,52 @@ footer {
   }
 
   .desktop-hero-section {
-    width: 75vw;
-    margin: 1rem auto;
+    margin: 0 auto;
+    width: 80vw;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 1rem;
   }
 
   .desktop-hero-content {
-    max-width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .desktop-first-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8.7rem;
+    gap: 4rem;
   }
 
   .desktop-hero-content h1 {
-    font-size: 75px;
-    padding-top: 9rem;
-    padding-bottom: 2.6rem;
-    line-height: 1;
+    font-size: 4.5rem;
   }
 
   .desktop-hero-content p {
-    font-size: 18px;
+    font-size: 1.2rem;
+    line-height: 2rem;
     color: var(--Gray-500);
-    line-height: 1.6;
-    padding-bottom: 5rem;
   }
 
   .desktop-hero-content .desktop-btn-learn {
     padding: 0.5rem 1.5rem;
-    background-color: var(--Gray-950);
-    color: var(--Gray-50);
+    background-color: transparent;
+    color: var(--Gray-950);
+    font-size: 1.2rem;
+    font-weight: 700;
     border-radius: 0.5rem;
-    margin-bottom: 7.3rem;
-    font-size: 18px;
+    align-self: flex-start;
+    border: 1px solid var(--Gray-950);
   }
 
   .desktop-client-logo {
     display: flex;
-    justify-content: flex-start;
+    justify-content: start;
     align-items: center;
-    gap: 1.2rem;
+    gap: 1.5rem;
   }
 
   .desktop-client-logo img {
@@ -359,11 +447,6 @@ footer {
 
   .desktop-client-logo .audiophile {
     width: 80px;
-  }
-
-  .desktop-hero-image {
-    width: 100%;
-    margin: 0 auto;
   }
 
   .desktop-hero-image img {
