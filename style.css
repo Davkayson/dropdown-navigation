@@ -396,6 +396,7 @@ footer {
     width: 80vw;
     display: grid;
     grid-template-columns: repeat(2, 50%);
+    border: 1px solid red;
     grid-gap: 1rem;
   }
 
@@ -450,7 +451,7 @@ footer {
   }
 
   .desktop-hero-image img {
-    width: 100%;
+    width: 95%;
   }
 }
 
